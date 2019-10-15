@@ -1,0 +1,20 @@
+{
+  "name": "next-source-maps-test",
+  "version": "0.1.0",
+  "private": true,
+  "scripts": {
+    "dev": "next dev -p 8888",
+    "build": "next build",
+    "start": "next start"
+  },
+  "dependencies": {
+    "next": "9.1.1",
+    "react": "16.10.2",
+    "react-dom": "16.10.2"
+  },
+  "devDependencies": {
+    "@zeit/next-sass": "^1.0.1",
+    "@zeit/next-source-maps": "0.0.4-canary.1",
+    "webpack": "^4.41.2"
+  }
+}
