@@ -1,11 +1,6 @@
 const webpack = require('webpack');
 const withSass = require('@zeit/next-sass');
-const withSourceMaps = require('@zeit/next-source-maps')({
-  devtool: 'hidden-source-map',
-  terserOptions: {
-    mangle: true,
-  },
-});
+const withSourceMaps = require('@zeit/next-source-maps')();
 
 const sourceMapDevToolOptions = {
   append: '\n//# sourceMappingURL=https://example.com/sourcemap/[url]'
@@ -14,7 +9,6 @@ const sourceMapDevToolOptions = {
 module.exports = () => {
   return withSourceMaps(
     withSass({
-      devtool: 'hidden-source-map',
       cssModules: true,
       cssLoaderOptions: {
         importLoaders: 1,
